@@ -27,17 +27,17 @@
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer src="Model/DST P40I (1).glb"
-                  ios-src="Model/DST P40I (1).usdz"
+    <model-viewer src="Model/DST P40I.gltf"
+                  ios-src="Model/DST P40I.usdz"
                   alt=""
                   shadow-intensity="0"
-				 id="viewer-singleton"
+				 
                   camera-controls
 				  camera-orbit="120deg 60deg 12m"
 				  safari chrome
                    ar
 				   ar-scale=""
-				    exposure="0.8"
+				   exposure="1"
 				  poster="Images/Poster.png">
     </model-viewer>
     <section class="attribution">
@@ -54,26 +54,9 @@
   <script nomodule
       src="js/model-viewer-legacy.js">
   </script>
-  <script>
-        (() => {
-          var checkExist = setInterval(function() {
-           if (document.querySelector("#viewer-singleton") != null) {
-              modelViewer = document.querySelector("#viewer-singleton");
-              modelViewer.activateAR();
-              clearInterval(checkExist);
-           }
-        }, 100);
-        })();
-    </script>
+  
   
 
 </body>
 </html>
     
-  
-  
-  
-  
-  
-  
-  
