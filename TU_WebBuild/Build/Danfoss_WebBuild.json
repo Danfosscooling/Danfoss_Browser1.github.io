@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "WebAR",
+"productVersion": "0.1",
+"dataUrl": "Danfoss_WebBuild.data.unityweb",
+"wasmCodeUrl": "Danfoss_WebBuild.wasm.code.unityweb",
+"wasmFrameworkUrl": "Danfoss_WebBuild.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.18f1"
+}
