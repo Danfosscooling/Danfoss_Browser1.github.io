@@ -27,13 +27,13 @@
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer src="Model/EKE 100 with Display.glb"
-                  ios-src="Model/EKE 100 with Display.usdz"
+    <model-viewer src="Model/EKE 100 Display.glb"
+                  ios-src="Model/EKE 100 Display.usdz"
                   alt=""
                   shadow-intensity="0"
-				  id="viewer-singleton"
+				 
                   camera-controls
-				  camera-orbit="220deg 70deg 20m"
+				  camera-orbit="220deg 70deg 120m"
 				  safari chrome
                    ar
 				   ar-scale=""
@@ -41,7 +41,7 @@
 				  poster="Images/Poster.png">
     </model-viewer>
     <section class="attribution">
-      <h1> EKE 100 with Display </h1>
+      <h1> EKE 100 Display </h1>
         </div>
         <!-- ?? Include both scripts below to support all browsers! -->
 
@@ -54,18 +54,6 @@
   <script nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
-  
-  <script>
-        (() => {
-          var checkExist = setInterval(function() {
-           if (document.querySelector("#viewer-singleton") != null) {
-              modelViewer = document.querySelector("#viewer-singleton");
-              modelViewer.activateAR();
-              clearInterval(checkExist);
-           }
-        }, 100);
-        })();
-    </script>
   
   
 
