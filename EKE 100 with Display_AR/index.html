@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Danfoss </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="demo-styles.css">
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!-- ?? REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="js/webcomponents-loader.js"></script>
+
+    <!-- ?? OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script src="js/intersection-observer.js"></script>
+
+    <!-- ?? OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script src="js/ResizeObserver.js"></script>
+    
+    <!-- ?? OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="js/focus-visible.js" defer></script>
+
+  </head> 
+<body>
+  <div id="card">
+    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <model-viewer src="Model/EKE 100 with Display.glb"
+                  ios-src="Model/EKE 100 with Display.usdz"
+                  alt=""
+                  shadow-intensity="0"
+				  id="viewer-singleton"
+                  camera-controls
+				  camera-orbit="220deg 70deg 20m"
+				  safari chrome
+                   ar
+				   ar-scale=""
+				   exposure="1"
+				  poster="Images/Poster.png">
+    </model-viewer>
+    <section class="attribution">
+      <h1> EKE 100 with Display </h1>
+        </div>
+        <!-- ?? Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+  </script>
+  
+  <script>
+        (() => {
+          var checkExist = setInterval(function() {
+           if (document.querySelector("#viewer-singleton") != null) {
+              modelViewer = document.querySelector("#viewer-singleton");
+              modelViewer.activateAR();
+              clearInterval(checkExist);
+           }
+        }, 100);
+        })();
+    </script>
+  
+  
+
+</body>
+</html>
